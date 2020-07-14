@@ -25,7 +25,7 @@ SECRET_KEY = '3=m)w@4b%1x7jbosaek8r7$%-4vj370$)=y7b+nig^g002qqdo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sys.octoimoveis.com.br','www.sys.octoimoveis.com.br']
 
 
 # Application definition
@@ -131,3 +131,8 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+MEDIA_URL='/media/'
+STATICFILES_DIRS=[BASE_DIR +"/assets",]
+STATIC_ROOT='/home/ptnfroge/sys.octoimoveis.com.br/static'
+MEDIA_ROOT='/home/ptnfroge/sys.octoimoveis.com.br/media'
