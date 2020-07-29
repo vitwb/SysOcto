@@ -25,7 +25,7 @@ SECRET_KEY = '3=m)w@4b%1x7jbosaek8r7$%-4vj370$)=y7b+nig^g002qqdo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sys.octoimoveis.com.br','www.sys.octoimoveis.com.br']
+ALLOWED_HOSTS = ['sys.octoimoveis.com.br','www.sys.octoimoveis.com.br','127.0.0.1']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'mysite.core',
 ]
+LANGUAGES = [('pt-br', 'Brazilian Portuguese')]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -111,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 

@@ -4,8 +4,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Corretor
-
+from .models import *
+from .forms import *
+@login_required
 
 def home(request):
     count = User.objects.count()
@@ -27,7 +28,7 @@ def signup(request):
     })
 
 
-@login_required
-def corretores(request):
-    corretoress = Corretor.objects.all()
-    return render(request, 'corretores.html', {'corretoress': corretoress})
+
+def criarcorretores(request):
+    corretores = Corretor.objects.all()
+    return render(request, 'CriarCorretor.html',{'corretores':corretores})

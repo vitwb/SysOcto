@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+      <div class="row">
+        <div class="col-10"><h5>Corretores</h5></div>
+        <div class="col-1"><button type="submit" class="btn btn-primary">Editar</button></div>
+      </div>             
+		</div>
+		<div class="card card-body">
+			<table class="table">
+				<tr>
+					<th>Nome </th>
+					<th>Telefone</th>
+					<th>Email</th>
+        </tr>
+        {% for i in corretores %}
+          <tr>
+            <td>{{i.nome}}</td>
+            <td>{{i.telefone}}</td>
+            <td>{{i.email}}</td>
+            <td><button type="submit" class="btn btn-primary">Editar</button></td>
+          </tr>           
+        {% endfor %}
+			</table>
+		</div>
+	</div>	
+</div>
+{% endblock %}
